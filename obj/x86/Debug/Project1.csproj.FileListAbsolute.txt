@@ -1,0 +1,108 @@
+C:\Users\Ярослав\Desktop\Project1\Project1\bin\Debug\Project1.exe.config
+C:\Users\Ярослав\Desktop\Project1\Project1\bin\Debug\Project1.exe
+C:\Users\Ярослав\Desktop\Project1\Project1\bin\Debug\Project1.pdb
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\Project1.Propoperties.Resources.resources
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\Project1.Resource1.resources
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\Курсовая_РБД_Трофимова.Главная_форма.resources
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\Курсовая_РБД_Трофимова.Заказ_препарата.resources
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\Курсовая_РБД_Трофимова.Поиск_препарата_по_названию_препарата.resources
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\Курсовая_РБД_Трофимова.Поиск_фирмы_по_названию.resources
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\Курсовая_РБД_Трофимова.Показания_к_применению_препаратов.resources
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\Project1.Препараты_и_фирмы_их_поставляющие.resources
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\Project1.Препараты_табл.resources
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\Project1.Содержимое_заказа_перечень_препаратов.resources
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\Project1.Состав и лекарственная форма.resources
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\Project1.Таблица Заболевания.resources
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\Project1.Тип_препарата_БАД.resources
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\Project1.Тип_препарата_Витамин.resources
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\Project1.Тип_препарата_Косметика.resources
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\Project1.Тип_препарата_Лекарство.resources
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\Project1.Фармакологические свойства.resources
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\Project1.Фирмы_табл.resources
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\GenerateResource-ResGen.read.4.tlog
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\Project1.exe
+C:\Users\Ярослав\Desktop\Project1\Project1\obj\x86\Debug\Project1.pdb
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\bin\Debug\Project1.exe.config
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\Project1.exe
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\Project1.pdb
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\bin\Debug\Project1.exe
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\bin\Debug\Project1.pdb
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\Project1.Propoperties.Resources.resources
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\Project1.Resource1.resources
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\Курсовая_Чуваев.Главная_форма.resources
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\Курсовая_Чуваев.Заказ_препарата.resources
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\Курсовая_Чуваев.Поиск_препарата_по_названию_препарата.resources
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\Курсовая_Чуваев.Поиск_фирмы_по_названию.resources
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\Курсовая_Чуваев.Показания_к_применению_препаратов.resources
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\Project1.Препараты_и_фирмы_их_поставляющие.resources
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\Project1.Препараты_табл.resources
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\Project1.Содержимое_заказа_перечень_препаратов.resources
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\Project1.Состав и лекарственная форма.resources
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\Project1.Таблица Заболевания.resources
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\Project1.Тип_препарата_БАД.resources
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\Project1.Тип_препарата_Витамин.resources
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\Project1.Тип_препарата_Косметика.resources
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\Project1.Тип_препарата_Лекарство.resources
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\Project1.Фармакологические свойства.resources
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\Project1.Фирмы_табл.resources
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\GenerateResource-ResGen.read.4.tlog
+C:\Users\Ярослав\Desktop\Project1 - копия\Project1\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+F:\Project1 - копия\Project1\bin\Debug\Project1.exe.config
+F:\Project1 - копия\Project1\obj\x86\Debug\Project1.exe
+F:\Project1 - копия\Project1\obj\x86\Debug\Project1.pdb
+F:\Project1 - копия\Project1\bin\Debug\Project1.exe
+F:\Project1 - копия\Project1\bin\Debug\Project1.pdb
+F:\Project1 - копия\Project1\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\Project1 - копия\Project1\obj\x86\Debug\Project1.Propoperties.Resources.resources
+F:\Project1 - копия\Project1\obj\x86\Debug\Project1.Resource1.resources
+F:\Project1 - копия\Project1\obj\x86\Debug\Курсовая_Чуваев.Главная_форма.resources
+F:\Project1 - копия\Project1\obj\x86\Debug\Курсовая_Чуваев.Заказ_препарата.resources
+F:\Project1 - копия\Project1\obj\x86\Debug\Курсовая_Чуваев.Поиск_препарата_по_названию_препарата.resources
+F:\Project1 - копия\Project1\obj\x86\Debug\Курсовая_Чуваев.Поиск_фирмы_по_названию.resources
+F:\Project1 - копия\Project1\obj\x86\Debug\Курсовая_Чуваев.Показания_к_применению_препаратов.resources
+F:\Project1 - копия\Project1\obj\x86\Debug\Project1.Препараты_и_фирмы_их_поставляющие.resources
+F:\Project1 - копия\Project1\obj\x86\Debug\Project1.Препараты_табл.resources
+F:\Project1 - копия\Project1\obj\x86\Debug\Project1.Содержимое_заказа_перечень_препаратов.resources
+F:\Project1 - копия\Project1\obj\x86\Debug\Project1.Состав и лекарственная форма.resources
+F:\Project1 - копия\Project1\obj\x86\Debug\Project1.Таблица Заболевания.resources
+F:\Project1 - копия\Project1\obj\x86\Debug\Project1.Тип_препарата_БАД.resources
+F:\Project1 - копия\Project1\obj\x86\Debug\Project1.Тип_препарата_Витамин.resources
+F:\Project1 - копия\Project1\obj\x86\Debug\Project1.Тип_препарата_Косметика.resources
+F:\Project1 - копия\Project1\obj\x86\Debug\Project1.Тип_препарата_Лекарство.resources
+F:\Project1 - копия\Project1\obj\x86\Debug\Project1.Фармакологические свойства.resources
+F:\Project1 - копия\Project1\obj\x86\Debug\Project1.Фирмы_табл.resources
+F:\Project1 - копия\Project1\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+F:\Project1 - копия\Project1\obj\x86\Debug\GenerateResource-ResGen.read.4.tlog
+F:\Project1 - копия\Project1\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+H:\Project1 - копия\Project1\bin\Debug\Project1.exe.config
+H:\Project1 - копия\Project1\obj\x86\Debug\Project1.exe
+H:\Project1 - копия\Project1\obj\x86\Debug\Project1.pdb
+H:\Project1 - копия\Project1\bin\Debug\Project1.exe
+H:\Project1 - копия\Project1\bin\Debug\Project1.pdb
+H:\Project1 - копия\Project1\obj\x86\Debug\ResolveAssemblyReference.cache
+H:\Project1 - копия\Project1\obj\x86\Debug\Project1.Propoperties.Resources.resources
+H:\Project1 - копия\Project1\obj\x86\Debug\Project1.Resource1.resources
+H:\Project1 - копия\Project1\obj\x86\Debug\Курсовая_Чуваев.Главная_форма.resources
+H:\Project1 - копия\Project1\obj\x86\Debug\Курсовая_Чуваев.Заказ_препарата.resources
+H:\Project1 - копия\Project1\obj\x86\Debug\Курсовая_Чуваев.Поиск_препарата_по_названию_препарата.resources
+H:\Project1 - копия\Project1\obj\x86\Debug\Курсовая_Чуваев.Поиск_фирмы_по_названию.resources
+H:\Project1 - копия\Project1\obj\x86\Debug\Курсовая_Чуваев.Показания_к_применению_препаратов.resources
+H:\Project1 - копия\Project1\obj\x86\Debug\Project1.Препараты_и_фирмы_их_поставляющие.resources
+H:\Project1 - копия\Project1\obj\x86\Debug\Project1.Препараты_табл.resources
+H:\Project1 - копия\Project1\obj\x86\Debug\Project1.Содержимое_заказа_перечень_препаратов.resources
+H:\Project1 - копия\Project1\obj\x86\Debug\Project1.Состав и лекарственная форма.resources
+H:\Project1 - копия\Project1\obj\x86\Debug\Project1.Таблица Заболевания.resources
+H:\Project1 - копия\Project1\obj\x86\Debug\Project1.Тип_препарата_БАД.resources
+H:\Project1 - копия\Project1\obj\x86\Debug\Project1.Тип_препарата_Витамин.resources
+H:\Project1 - копия\Project1\obj\x86\Debug\Project1.Тип_препарата_Косметика.resources
+H:\Project1 - копия\Project1\obj\x86\Debug\Project1.Тип_препарата_Лекарство.resources
+H:\Project1 - копия\Project1\obj\x86\Debug\Project1.Фармакологические свойства.resources
+H:\Project1 - копия\Project1\obj\x86\Debug\Project1.Фирмы_табл.resources
+H:\Project1 - копия\Project1\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+H:\Project1 - копия\Project1\obj\x86\Debug\GenerateResource-ResGen.read.4.tlog
+H:\Project1 - копия\Project1\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog

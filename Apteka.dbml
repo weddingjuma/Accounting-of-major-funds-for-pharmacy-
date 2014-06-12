@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FarmCompany" Class="FarCompDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=91.214.80.48;Initial Catalog=FarmCompany;Integrated Security=False;User ID=app_company" SettingsObjectName="Project1.Properties.Settings" SettingsPropertyName="FarComp_AibolitConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Заболевания" Member="Заболеванияs">
+    <Type Name="Заболевания">
+      <Column Name="Шифр_заболевания" Type="System.String" DbType="NChar(50)" IsPrimaryKey="false" CanBeNull="false" />
+      <Column Name="При_заболеваниях" Type="System.String" DbType="NChar(50)" CanBeNull="false" />
+      <Column Name="Тип_препарат" Type="System.String" DbType="NChar(50)" CanBeNull="false" />
+      <Association Name="Заболевания_Показания_к_применению" Member="Показания_к_применениюs" ThisKey="Шифр_заболевания" OtherKey="При_заболеваниях" Type="Показания_к_применению" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Заказ_по_фирме" Member="Заказ_по_фирмеs">
+    <Type Name="Заказ_по_фирме">
+      <Column Name="NЗаказа" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Шифр_фирмы" Type="System.Int32" DbType="Int" CanBeNull="false" />
+      <Column Name="Дата_заказа" Type="System.DateTime" DbType="DateTime" CanBeNull="false" />
+      <Column Name="Итого_к_оплате_за_заказ" Type="System.Decimal" DbType="Money" CanBeNull="false" />
+      <Association Name="Заказ_по_фирме_Содержимое_заказа" Member="Содержимое_заказаs" ThisKey="NЗаказа" OtherKey="NЗаказа" Type="Содержимое_заказа" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Показания_к_применению" Member="Показания_к_применениюs">
+    <Type Name="Показания_к_применению">
+      <Column Name="№ Препарата" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Шифр заболевания" Member="При_заболеваниях" Type="System.String" DbType="NChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Доза" Type="System.String" DbType="NChar(255)" CanBeNull="true" />
+      <Column Name="Побочные действия" Member="Побочные___действия" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Противопоказания" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Взаимодействие с другими лекарствами" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Показания к применению" Member="Показания_к_применению1" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Особые указания" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Передозировка" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Заболевания_Показания_к_применению" Member="Заболевания" ThisKey="При_заболеваниях" OtherKey="Шифр_заболевания" Type="Заболевания" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Препараты_Показания_к_применению" Member="Препараты" ThisKey="NПрепарата" OtherKey="NПрепарата" Type="Препараты" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Прайс_цен" Member="Прайс_ценs">
+    <Type Name="Прайс_цен">
+      <Column Name="NПрепарата" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Шифр_фирмы" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Количество_штук" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Оптовая_цена" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="Препараты_Прайс_цен" Member="Препараты" ThisKey="NПрепарата" OtherKey="NПрепарата" Type="Препараты" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Фирмы_Прайс_цен" Member="Фирмы" ThisKey="Шифр_фирмы" OtherKey="Шифр_фирмы" Type="Фирмы" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Препараты" Member="Препаратыs">
+    <Type Name="Препараты">
+      <Column Name="NПрепарата" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Регистрационный_номер" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="Название_препарата" Type="System.String" DbType="NChar(150)" CanBeNull="true" />
+      <Column Name="Международное_непатентовонне_название" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Химическое_название" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Срок_хранения" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      
+      <Column Name="Тип_препарата" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="Примечание" Type="System.String" DbType="NChar(250)" CanBeNull="true" />
+      <Column Name="Форма_выпуска" Type="System.String" DbType="NChar(25)" CanBeNull="true" />
+      <Column Name="Состав_и_лекарственная_форма" Type="System.String" DbType="NChar(255)" CanBeNull="true" />
+      <Column Name="Фармакотерапевтическая_группа" Type="System.String" DbType="NChar(200)" CanBeNull="true" />
+      <Column Name="Фармакодинамика" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Фармакокинетика" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Производитель" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Препараты_Показания_к_применению" Member="Показания_к_применениюs" ThisKey="NПрепарата" OtherKey="NПрепарата" Type="Показания_к_применению" />
+      <Association Name="Препараты_Прайс_цен" Member="Прайс_ценs" ThisKey="NПрепарата" OtherKey="NПрепарата" Type="Прайс_цен" />
+      <Association Name="Препараты_Содержимое_заказа" Member="Содержимое_заказаs" ThisKey="NПрепарата" OtherKey="NПрепарата" Type="Содержимое_заказа" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Фирмы" Member="Фирмыs">
+    <Type Name="Фирмы">
+      <Column Name="Шифр_фирмы" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Название_фирмы" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="Адрес" Type="System.String" DbType="NChar(150)" CanBeNull="true" />
+      <Column Name="Телефон" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="Идентификационный_номер" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Банк" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Расчетный_счет" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="БИК" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="К_с" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Индекс" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Сайт" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Association Name="Фирмы_Прайс_цен" Member="Прайс_ценs" ThisKey="Шифр_фирмы" OtherKey="Шифр_фирмы" Type="Прайс_цен" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Содержимое_заказа" Member="Содержимое_заказаs">
+    <Type Name="Содержимое_заказа">
+      <Column Name="№Препарата" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="№Заказа" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Кол_заказа" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="К_оплате_за_товар" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="Заказ_по_фирме_Содержимое_заказа" Member="Заказ_по_фирме" ThisKey="NЗаказа" OtherKey="NЗаказа" Type="Заказ_по_фирме" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Препараты_Содержимое_заказа" Member="Препараты" ThisKey="NПрепарата" OtherKey="NПрепарата" Type="Препараты" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sel" Method="sel">
+    <Parameter Name="se" Type="System.String" DbType="NChar(150)" />
+    <ElementType Name="selResult">
+      <Column Name="NПрепарата" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Регистрационный_номер" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="Название_препарата" Type="System.String" DbType="NChar(150)" CanBeNull="true" />
+      <Column Name="Международное_непатентовонне_название" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Химическое_название" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Срок_хранения" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Изображение" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="Тип_препарата" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="Примечание" Type="System.String" DbType="NChar(250)" CanBeNull="true" />
+      <Column Name="Форма_выпуска" Type="System.String" DbType="NChar(25)" CanBeNull="true" />
+      <Column Name="Состав_и_лекарственная_форма" Type="System.String" DbType="NChar(255)" CanBeNull="true" />
+      <Column Name="Фармакотерапевтическая_группа" Type="System.String" DbType="NChar(200)" CanBeNull="true" />
+      <Column Name="Фармакодинамика" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Фармакокинетика" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Производитель" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="цена" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Количество_штук" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Название_фирмы" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="Адрес" Type="System.String" DbType="NChar(150)" CanBeNull="true" />
+      <Column Name="Телефон" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="Сайт" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.показания_к_применению_по_заболеванию" Method="показания_к_применению_по_заболеванию">
+    <Parameter Name="zabolevanie" Type="System.String" DbType="NChar(50)" />
+    <ElementType Name="показания_к_применению_по_заболеваниюResult">
+      <Column Name="При_зболеваниях" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Тип_препарата" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="NПрепарата" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[При заболеваниях]" Member="При_заболеваниях" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Доза" Type="System.String" DbType="NChar(255)" CanBeNull="true" />
+      <Column Name="[Побочные&#xD;&#xA;_действия]" Member="Побочные___действия" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Противопоказания" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Взаимодействие_с_другими_препаратами" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Показания_к_применению" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Особые_указания" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Передозировка" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Название_препарата" Type="System.String" DbType="NChar(150)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.БАД" Method="БАД">
+    <ElementType Name="БАДResult">
+      <Column Name="NПрепарата" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Регистрационный_номер" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="Название_препарата" Type="System.String" DbType="NChar(150)" CanBeNull="true" />
+      <Column Name="Международное_непатентовонне_название" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Химическое_название" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Срок_хранения" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Изображение" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="Тип_препарата" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="Примечание" Type="System.String" DbType="NChar(250)" CanBeNull="true" />
+      <Column Name="Форма_выпуска" Type="System.String" DbType="NChar(25)" CanBeNull="true" />
+      <Column Name="Состав_и_лекарственная_форма" Type="System.String" DbType="NChar(255)" CanBeNull="true" />
+      <Column Name="Фармакотерапевтическая_группа" Type="System.String" DbType="NChar(200)" CanBeNull="true" />
+      <Column Name="Фармакодинамика" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Фармакокинетика" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Производитель" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Витамин" Method="Витамин">
+    <ElementType Name="ВитаминResult">
+      <Column Name="NПрепарата" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Регистрационный_номер" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="Название_препарата" Type="System.String" DbType="NChar(150)" CanBeNull="true" />
+      <Column Name="Международное_непатентовонне_название" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Химическое_название" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Срок_хранения" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Изображение" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="Тип_препарата" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="Примечание" Type="System.String" DbType="NChar(250)" CanBeNull="true" />
+      <Column Name="Форма_выпуска" Type="System.String" DbType="NChar(25)" CanBeNull="true" />
+      <Column Name="Состав_и_лекарственная_форма" Type="System.String" DbType="NChar(255)" CanBeNull="true" />
+      <Column Name="Фармакотерапевтическая_группа" Type="System.String" DbType="NChar(200)" CanBeNull="true" />
+      <Column Name="Фармакодинамика" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Фармакокинетика" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Производитель" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Косметика" Method="Косметика">
+    <ElementType Name="КосметикаResult">
+      <Column Name="NПрепарата" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Регистрационный_номер" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="Название_препарата" Type="System.String" DbType="NChar(150)" CanBeNull="true" />
+      <Column Name="Международное_непатентовонне_название" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Химическое_название" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Срок_хранения" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Изображение" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="Тип_препарата" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="Примечание" Type="System.String" DbType="NChar(250)" CanBeNull="true" />
+      <Column Name="Форма_выпуска" Type="System.String" DbType="NChar(25)" CanBeNull="true" />
+      <Column Name="Состав_и_лекарственная_форма" Type="System.String" DbType="NChar(255)" CanBeNull="true" />
+      <Column Name="Фармакотерапевтическая_группа" Type="System.String" DbType="NChar(200)" CanBeNull="true" />
+      <Column Name="Фармакодинамика" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Фармакокинетика" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Производитель" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Лекарство" Method="Лекарство">
+    <ElementType Name="ЛекарствоResult">
+      <Column Name="NПрепарата" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Регистрационный_номер" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="Название_препарата" Type="System.String" DbType="NChar(150)" CanBeNull="true" />
+      <Column Name="Международное_непатентовонне_название" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Химическое_название" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Срок_хранения" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Изображение" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="Тип_препарата" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="Примечание" Type="System.String" DbType="NChar(250)" CanBeNull="true" />
+      <Column Name="Форма_выпуска" Type="System.String" DbType="NChar(25)" CanBeNull="true" />
+      <Column Name="Состав_и_лекарственная_форма" Type="System.String" DbType="NChar(255)" CanBeNull="true" />
+      <Column Name="Фармакотерапевтическая_группа" Type="System.String" DbType="NChar(200)" CanBeNull="true" />
+      <Column Name="Фармакодинамика" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Фармакокинетика" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Производитель" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Поиск_препарата" Method="Поиск_препарата">
+    <Parameter Name="nazv" Type="System.String" DbType="NChar(150)" />
+    <ElementType Name="Поиск_препаратаResult">
+      <Column Name="NПрепарата" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Регистрационный_номер" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="Название_препарата" Type="System.String" DbType="NChar(150)" CanBeNull="true" />
+      <Column Name="Международное_непатентовонне_название" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Химическое_название" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Срок_хранения" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Изображение" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="Тип_препарата" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="Примечание" Type="System.String" DbType="NChar(250)" CanBeNull="true" />
+      <Column Name="Форма_выпуска" Type="System.String" DbType="NChar(25)" CanBeNull="true" />
+      <Column Name="Состав_и_лекарственная_форма" Type="System.String" DbType="NChar(255)" CanBeNull="true" />
+      <Column Name="Фармакотерапевтическая_группа" Type="System.String" DbType="NChar(200)" CanBeNull="true" />
+      <Column Name="Фармакодинамика" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Фармакокинетика" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Производитель" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Поиск_фирмы" Method="Поиск_фирмы">
+    <Parameter Name="nazv" Type="System.String" DbType="NChar(30)" />
+    <ElementType Name="Поиск_фирмыResult">
+      <Column Name="Шифр_фирмы" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Название_фирмы" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="Адрес" Type="System.String" DbType="NChar(150)" CanBeNull="true" />
+      <Column Name="Телефон" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="Идентификационный_номер" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Банк" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Расчетный_счет" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="БИК" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="К_с" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Индекс" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Сайт" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

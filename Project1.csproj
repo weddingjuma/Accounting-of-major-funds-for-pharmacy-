@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C3975BA6-809C-4051-8BDD-B13159E0BB0C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Project1</RootNamespace>
+    <AssemblyName>Project1</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Apteka.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Apteka1.designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Propoperties\DataSources\selResult.datasource" />
+    <None Include="Propoperties\DataSources\БАДResult.datasource" />
+    <None Include="Propoperties\DataSources\ВитаминResult.datasource" />
+    <None Include="Propoperties\DataSources\Заболевания.datasource" />
+    <None Include="Propoperties\DataSources\Заказ_по_фирме.datasource" />
+    <None Include="Propoperties\DataSources\КосметикаResult.datasource" />
+    <None Include="Propoperties\DataSources\ЛекарствоResult.datasource" />
+    <None Include="Propoperties\DataSources\Поиск_препаратаResult.datasource" />
+    <None Include="Propoperties\DataSources\Поиск_фирмыResult.datasource" />
+    <None Include="Propoperties\DataSources\Показания_к_применению.datasource" />
+    <None Include="Propoperties\DataSources\показания_к_применению_по_заболеваниюResult.datasource" />
+    <None Include="Propoperties\DataSources\Прайс_цен.datasource" />
+    <None Include="Propoperties\DataSources\Препараты.datasource" />
+    <None Include="Propoperties\DataSources\Содержимое_заказа.datasource" />
+    <None Include="Propoperties\DataSources\Фирмы.datasource" />
+    <None Include="Propoperties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Apteka.cs">
+      <DependentUpon>Apteka.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Apteka.designer.cs" />
+    <Compile Include="Apteka1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Apteka.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Propoperties\AssemblyInfo.cs" />
+    <Compile Include="Propoperties\Resources.Designer.cs" />
+    <Compile Include="Propoperties\Settings.Designer.cs" />
+    <Compile Include="Propoperties\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Главная_форма.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Главная_форма.designer.cs">
+      <DependentUpon>Главная_форма.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Заказ_препарата.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Заказ_препарата.designer.cs">
+      <DependentUpon>Заказ_препарата.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Поиск_препарата_по_названию_препарата.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Поиск_препарата_по_названию_препарата.designer.cs">
+      <DependentUpon>Поиск_препарата_по_названию_препарата.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Поиск_фирмы_по_названию.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Поиск_фирмы_по_названию.designer.cs">
+      <DependentUpon>Поиск_фирмы_по_названию.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Показания_к_применению_препаратов.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Показания_к_применению_препаратов.designer.cs">
+      <DependentUpon>Показания_к_применению_препаратов.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Препараты_и_фирмы_их_поставляющие.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Препараты_и_фирмы_их_поставляющие.Designer.cs" />
+    <Compile Include="Препараты_и_фирмы_их_поставляющие1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Препараты_и_фирмы_их_поставляющие.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Препараты_табл.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Препараты_табл.Designer.cs" />
+    <Compile Include="Препараты_табл1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Препараты_табл.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Содержимое_заказа_перечень_препаратов.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Содержимое_заказа_перечень_препаратов.Designer.cs" />
+    <Compile Include="Содержимое_заказа_перечень_препаратов1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Содержимое_заказа_перечень_препаратов.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Состав и лекарственная форма.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Состав и лекарственная форма.Designer.cs" />
+    <Compile Include="Состав и лекарственная форма1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Состав и лекарственная форма.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Таблица Заболевания.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Таблица Заболевания.Designer.cs" />
+    <Compile Include="Таблица Заболевания1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Таблица Заболевания.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Тип_препарата_БАД.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Тип_препарата_БАД.Designer.cs" />
+    <Compile Include="Тип_препарата_БАД1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Тип_препарата_БАД.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Тип_препарата_Витамин.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Тип_препарата_Витамин.Designer.cs" />
+    <Compile Include="Тип_препарата_Витамин1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Тип_препарата_Витамин.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Тип_препарата_Косметика.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Тип_препарата_Косметика.Designer.cs" />
+    <Compile Include="Тип_препарата_Косметика1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Тип_препарата_Косметика.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Тип_препарата_Лекарство.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Тип_препарата_Лекарство.Designer.cs" />
+    <Compile Include="Тип_препарата_Лекарство1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Тип_препарата_Лекарство.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Фармакологические свойства.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Фармакологические свойства.Designer.cs" />
+    <Compile Include="Фармакологические свойства1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Фармакологические свойства.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Фирмы_табл.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Фирмы_табл.Designer.cs" />
+    <Compile Include="Фирмы_табл1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Фирмы_табл.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Apteka.dbml.layout">
+      <DependentUpon>Apteka.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Propoperties\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Главная_форма.resx">
+      <DependentUpon>Главная_форма.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Заказ_препарата.resx">
+      <DependentUpon>Заказ_препарата.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Поиск_препарата_по_названию_препарата.resx">
+      <DependentUpon>Поиск_препарата_по_названию_препарата.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Поиск_фирмы_по_названию.resx">
+      <DependentUpon>Поиск_фирмы_по_названию.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Показания_к_применению_препаратов.resx">
+      <DependentUpon>Показания_к_применению_препаратов.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Препараты_и_фирмы_их_поставляющие.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Препараты_и_фирмы_их_поставляющие1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Препараты_табл.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Препараты_табл1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Содержимое_заказа_перечень_препаратов.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Содержимое_заказа_перечень_препаратов1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Состав и лекарственная форма.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Состав и лекарственная форма1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Таблица Заболевания.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Таблица Заболевания1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Тип_препарата_БАД.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Тип_препарата_БАД1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Тип_препарата_Витамин.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Тип_препарата_Витамин1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Тип_препарата_Косметика.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Тип_препарата_Косметика1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Тип_препарата_Лекарство.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Тип_препарата_Лекарство1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Фармакологические свойства.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Фармакологические свойства1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Фирмы_табл.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Фирмы_табл1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+    <None Include="Resources\%25dok.jpg" />
+    <None Include="Resources\60.jpg" />
+    <None Include="Resources\70.jpg" />
+    <None Include="Resources\1232466854_green_apteka.jpg" />
+    <None Include="Resources\J0384895.JPG" />
+    <None Include="Resources\Айболит.jpg" />
+    <Content Include="Курсовая.csproj" />
+    <Content Include="Курсовая.user" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
